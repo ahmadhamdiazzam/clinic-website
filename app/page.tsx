@@ -66,7 +66,7 @@ export default function Home() {
       <section style={{ marginBottom: '40px' }}>
         <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '15px' }}>General Advice</h2>
         <div style={{ display: 'flex', gap: '15px', overflowX: 'scroll', paddingBottom: '10px' }}>
-          {['Stay hydrated for joint lubrication.', 'Maintain good posture during long clinic shifts.', 'Warm up before heavy lifting.'].map((tip, i) => (
+          {['Stay hydrated for joint lubrication.', 'Maintain good posture during long shifts.', 'Warm up before any exercise or sport.', 'Regularly shift position or posture every 30 minutes.'].map((tip, i) => (
             <div key={i} style={{ minWidth: '200px', padding: '20px', backgroundColor: '#f3f4f6', borderRadius: '10px', border: '1px solid #ddd', textAlign: 'center', color: '#333' }}>
               {tip}
             </div>

@@ -4,10 +4,12 @@ import { useState } from "react";
 
 export default function Home() {
   const [lang, setLang] = useState<"en" | "ar">("en");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const content = {
     en: {
       toggleBtn: "العربية",
+      menu: "MENU",
       direction: "ltr",
       name: "DR. AHMAD HAMDI AZZAM",
       title: "Consultant of Orthopedic Surgery",
@@ -38,6 +40,7 @@ export default function Home() {
     },
     ar: {
       toggleBtn: "ENGLISH",
+      menu: "القائمة",
       direction: "rtl",
       name: "د. أحمد حمدي عزام",
       title: "استشاري جراحة العظام",
@@ -68,14 +71,17 @@ export default function Home() {
     }
   };
 
-  const t = content[lang];
+  const t: any = content[lang];
 
   return (
     <main dir={t.direction} style={{ fontFamily: 'Arial, sans-serif', color: '#111', backgroundColor: '#fff' }}>
       
       {/* HEADER / NAVBAR */}
       <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 40px', borderBottom: '1px solid #eaeaea' }}>
-        <div style={{ fontFamily: 'Georgia, serif', fontSize: '18px', letterSpacing: '1px', fontWeight: 'bold' }}>
+        <button onClick={() => setMenuOpen(!menuOpen)} style={{ background: 'none', border: 'none', fontSize: '14px', cursor: 'pointer', fontWeight: 'bold' }}>
+        ≡ {t.menu}
+        </button>
+        <div style={{ fontFamily: 'Georgia, serif', fontSize: '18px', fontWeight: 'bold' }}>
           AZZAM ORTHOPEDICS
         </div>
         <button 

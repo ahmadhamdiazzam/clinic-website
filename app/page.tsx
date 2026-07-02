@@ -50,7 +50,7 @@ export default function Home() {
         </p>
       </section>
 
-      {/* 4. Services */}
+      {/* 4. Services Slider */}
       <section style={{ marginBottom: '40px' }}>
         <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '15px' }}>Our Services</h2>
         <div style={{ display: 'flex', gap: '15px', overflowX: 'scroll', paddingBottom: '10px' }}>
@@ -62,8 +62,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Footer */}
-      <footer style={{ borderTop: '1px solid #ccc', paddingTop: '20px', textAlign: 'center' }}>
+      {/* 5. General Advice Slider */}
+      <section style={{ marginBottom: '40px' }}>
+        <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '15px' }}>General Advice</h2>
+        <div style={{ display: 'flex', gap: '15px', overflowX: 'scroll', paddingBottom: '10px' }}>
+          {['Stay hydrated for joint lubrication.', 'Maintain good posture during long clinic shifts.', 'Warm up before heavy lifting.'].map((tip, i) => (
+            <div key={i} style={{ minWidth: '200px', padding: '20px', backgroundColor: '#f3f4f6', borderRadius: '10px', border: '1px solid #ddd', textAlign: 'center', color: '#333' }}>
+              {tip}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 6. FAQs */}
+      <section style={{ marginBottom: '40px' }}>
+        <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '15px' }}>FAQs</h2>
+        <details style={{ padding: '15px', backgroundColor: '#f9fafb', marginBottom: '10px', borderRadius: '8px', border: '1px solid #ddd' }}>
+          <summary style={{ fontWeight: 'bold', cursor: 'pointer' }}>Do you accept insurance?</summary>
+          <p style={{ marginTop: '10px', color: '#555' }}>Please contact our office on WhatsApp to confirm your specific provider.</p>
+        </details>
+        <details style={{ padding: '15px', backgroundColor: '#f9fafb', marginBottom: '10px', borderRadius: '8px', border: '1px solid #ddd' }}>
+          <summary style={{ fontWeight: 'bold', cursor: 'pointer' }}>What should I bring to my first appointment?</summary>
+          <p style={{ marginTop: '10px', color: '#555' }}>Please bring any previous X-rays, MRI scans, and relevant medical records.</p>
+        </details>
+      </section>
+
+      {/* 7. Footer & Social Links */}
+      <footer style={{ borderTop: '1px solid #ccc', paddingTop: '20px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px', paddingBottom: '40px' }}>
         <a 
           href="https://wa.me/201020001914" 
           target="_blank" 
@@ -72,6 +97,10 @@ export default function Home() {
         >
           Chat on WhatsApp
         </a>
+        <div style={{ display: 'flex', gap: '20px', marginTop: '10px' }}>
+          <a href="https://www.instagram.com/dr.ahmad.azzam.ortho" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'none', fontWeight: 'bold' }}>Instagram</a>
+          <a href="#" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'none', fontWeight: 'bold' }}>Google Business</a>
+        </div>
       </footer>
     </main>
   );

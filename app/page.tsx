@@ -9,38 +9,43 @@ export default function Home() {
     en: {
       toggleBtn: "العربية",
       direction: "ltr",
-      name: "Dr. Ahmad Hamdi Azzam",
+      name: "DR. AHMAD HAMDI AZZAM",
       title: "Consultant of Orthopedic Surgery",
-      bookBtn: "Book Now",
+      bookBtn: "BOOK CONSULTATION",
+      aboutTitle: "MEET DR. AZZAM",
+      aboutText: "Providing advanced orthopedic care, comprehensive trauma management, and restorative joint surgery with a strict commitment to evidence-based medical excellence.",
       address: "40 Mosaddak St., Dokki, Giza | +20 1020001914",
-      servicesHead: "Our Services",
+      servicesHead: "PROCEDURES & TREATMENTS",
       services: ['Joint Replacement', 'Sports Injuries', 'Trauma Management'],
-      adviceHead: "General Advice",
+      adviceHead: "PATIENT RESOURCES",
       advice: [
         'Stay hydrated for joint lubrication.', 
         'Maintain good posture during long shifts.', 
         'Warm up before any exercise or sport.', 
         'Regularly shift position or posture every 30 minutes.'
       ],
-      faqHead: "FAQs",
+      faqHead: "FREQUENTLY ASKED QUESTIONS",
       faq1Q: "Do you accept insurance?",
       faq1A: "Please contact our office on WhatsApp to confirm your specific provider.",
       faq2Q: "What should I bring to my first appointment?",
       faq2A: "Please bring any previous X-rays, MRI scans, and relevant medical records.",
-      waBtn: "Chat on WhatsApp",
-      igBtn: "Instagram",
-      googleBtn: "Google Business"
+      contactHead: "CONTACT THE CLINIC",
+      waBtn: "CHAT ON WHATSAPP",
+      igBtn: "INSTAGRAM",
+      googleBtn: "GOOGLE BUSINESS"
     },
     ar: {
-      toggleBtn: "English",
+      toggleBtn: "ENGLISH",
       direction: "rtl",
       name: "د. أحمد حمدي عزام",
       title: "استشاري جراحة العظام",
-      bookBtn: "احجز الآن",
+      bookBtn: "احجز استشارتك",
+      aboutTitle: "تعرف على د. عزام",
+      aboutText: "نقدم رعاية متقدمة في جراحة العظام، وإدارة شاملة للإصابات، وجراحات ترميم المفاصل مع التزام صارم بالتميز الطبي القائم على الأدلة.",
       address: "٤٠ شارع مصدق، الدقي، الجيزة | +20 1020001914",
-      servicesHead: "خدماتنا",
+      servicesHead: "الإجراءات والعلاجات",
       services: ['تغيير المفاصل', 'إصابات الملاعب', 'علاج الكسور'],
-      adviceHead: "نصائح عامة",
+      adviceHead: "موارد المرضى",
       advice: [
         'حافظ على شرب الماء لترطيب المفاصل.', 
         'حافظ على وضعية جيدة أثناء فترات العمل الطويلة.', 
@@ -52,6 +57,7 @@ export default function Home() {
       faq1A: "يرجى التواصل مع عيادتنا عبر الواتساب لتأكيد شركة التأمين الخاصة بك.",
       faq2Q: "ماذا يجب أن أحضر في موعدي الأول؟",
       faq2A: "يرجى إحضار أي أشعة سينية، رنين مغناطيسي، وسجلات طبية سابقة.",
+      contactHead: "تواصل مع العيادة",
       waBtn: "تواصل عبر الواتساب",
       igBtn: "إنستجرام",
       googleBtn: "جوجل بيزنس"
@@ -61,113 +67,123 @@ export default function Home() {
   const t = content[lang];
 
   return (
-    <main dir={t.direction} style={{ padding: '20px', fontFamily: 'sans-serif', maxWidth: '800px', margin: '0 auto' }}>
+    <main dir={t.direction} style={{ fontFamily: 'Arial, sans-serif', color: '#111', backgroundColor: '#fff' }}>
       
-      {/* Top Toggle Tab */}
-      <div style={{ display: 'flex', justifyContent: lang === 'en' ? 'flex-end' : 'flex-start', marginBottom: '20px' }}>
+      {/* HEADER / NAVBAR */}
+      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 40px', borderBottom: '1px solid #eaeaea' }}>
+        <div style={{ fontFamily: 'Georgia, serif', fontSize: '18px', letterSpacing: '1px', fontWeight: 'bold' }}>
+          AZZAM ORTHOPEDICS
+        </div>
         <button 
           onClick={() => setLang(lang === "en" ? "ar" : "en")}
-          style={{ padding: '8px 16px', cursor: 'pointer', borderRadius: '5px', backgroundColor: '#e5e7eb', border: '1px solid #ccc', fontWeight: 'bold', fontSize: '16px' }}
+          style={{ padding: '8px 16px', cursor: 'pointer', backgroundColor: 'transparent', border: '1px solid #111', fontSize: '12px', letterSpacing: '1px', textTransform: 'uppercase' }}
         >
           {t.toggleBtn}
         </button>
-      </div>
+      </header>
 
-      {/* 1. Name and Profile */}
-      <section style={{ textAlign: 'center', marginBottom: '40px' }}>
-        <h1 style={{ fontSize: '32px', fontWeight: 'bold' }}>{t.name}</h1>
-        <p style={{ color: '#2563eb', fontSize: '18px' }}>{t.title}</p>
-        <div style={{ marginTop: '20px', marginBottom: '30px' }}>
-          <Image 
-            src="/profile.webp" 
-            alt={t.name} 
-            width={200} 
-            height={200} 
-            sizes="200px" 
-            priority
-            style={{ borderRadius: '50%', margin: '0 auto', objectFit: 'cover' }} 
-          />
-        </div>
-      </section>
-
-      {/* 2. Book Now Button */}
-      <section style={{ marginBottom: '40px', textAlign: 'center' }}>
+      {/* HERO SECTION (Dark luxury aesthetic) */}
+      <section style={{ backgroundColor: '#111827', color: '#fff', padding: '100px 20px', textAlign: 'center' }}>
+        <h1 style={{ fontFamily: 'Georgia, serif', fontSize: '42px', fontWeight: 'normal', letterSpacing: '2px', marginBottom: '10px' }}>
+          {t.name}
+        </h1>
+        <p style={{ fontSize: '16px', letterSpacing: '2px', textTransform: 'uppercase', color: '#d4af37', marginBottom: '40px' }}>
+          {t.title}
+        </p>
         <a 
           href="https://calendly.com/azzam-ortho-pro" 
           target="_blank" 
           rel="noopener noreferrer"
           style={{ 
-            padding: '12px 24px', 
-            backgroundColor: '#2563eb', 
-            color: 'white', 
-            borderRadius: '8px', 
+            padding: '16px 32px', 
+            border: '1px solid #d4af37', 
+            color: '#d4af37', 
             textDecoration: 'none',
-            fontWeight: 'bold',
-            display: 'inline-block',
-            boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+            fontSize: '14px',
+            letterSpacing: '2px',
+            transition: 'all 0.3s ease',
+            display: 'inline-block'
           }}
         >
           {t.bookBtn}
         </a>
       </section>
 
-      {/* 3. Address */}
-      <section style={{ marginBottom: '40px', textAlign: 'center' }}>
-        <p style={{ fontSize: '16px', color: '#333' }}>
-          {t.address}
+      {/* ABOUT SECTION */}
+      <section style={{ maxWidth: '800px', margin: '0 auto', padding: '80px 20px', textAlign: 'center' }}>
+        <h2 style={{ fontFamily: 'Georgia, serif', fontSize: '28px', letterSpacing: '1px', marginBottom: '30px' }}>{t.aboutTitle}</h2>
+        <Image 
+          src="/profile.webp" 
+          alt={t.name} 
+          width={180} 
+          height={180} 
+          sizes="180px" 
+          priority
+          style={{ borderRadius: '50%', margin: '0 auto 30px auto', objectFit: 'cover', border: '4px solid #f9f9f9' }} 
+        />
+        <p style={{ fontSize: '18px', lineHeight: '1.8', color: '#555' }}>
+          {t.aboutText}
         </p>
       </section>
 
-      {/* 4. Services Slider */}
-      <section style={{ marginBottom: '40px' }}>
-        <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '15px' }}>{t.servicesHead}</h2>
-        <div style={{ display: 'flex', gap: '15px', overflowX: 'scroll', paddingBottom: '10px' }}>
-          {t.services.map((service, i) => (
-            <div key={i} style={{ minWidth: '200px', padding: '20px', backgroundColor: '#1e3a8a', color: 'white', borderRadius: '10px', textAlign: 'center', fontWeight: 'bold' }}>
-              {service}
-            </div>
-          ))}
+      {/* PROCEDURES / SERVICES (Clean Minimalist Grid) */}
+      <section style={{ backgroundColor: '#f9f9f9', padding: '80px 20px', textAlign: 'center' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <h2 style={{ fontFamily: 'Georgia, serif', fontSize: '28px', letterSpacing: '1px', marginBottom: '40px' }}>{t.servicesHead}</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px' }}>
+            {t.services.map((service, i) => (
+              <div key={i} style={{ padding: '40px 20px', backgroundColor: '#fff', border: '1px solid #eaeaea' }}>
+                <h3 style={{ fontFamily: 'Georgia, serif', fontSize: '20px', fontWeight: 'normal' }}>{service}</h3>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* 5. General Advice Slider */}
-      <section style={{ marginBottom: '40px' }}>
-        <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '15px' }}>{t.adviceHead}</h2>
-        <div style={{ display: 'flex', gap: '15px', overflowX: 'scroll', paddingBottom: '10px' }}>
+      {/* ADVICE & FAQs */}
+      <section style={{ maxWidth: '800px', margin: '0 auto', padding: '80px 20px' }}>
+        
+        {/* Advice section */}
+        <h2 style={{ fontFamily: 'Georgia, serif', fontSize: '28px', letterSpacing: '1px', marginBottom: '30px', textAlign: 'center' }}>{t.adviceHead}</h2>
+        <ul style={{ listStyleType: 'none', padding: 0, marginBottom: '60px' }}>
           {t.advice.map((tip, i) => (
-            <div key={i} style={{ minWidth: '200px', padding: '20px', backgroundColor: '#f3f4f6', borderRadius: '10px', border: '1px solid #ddd', textAlign: 'center', color: '#333' }}>
+            <li key={i} style={{ padding: '20px 0', borderBottom: '1px solid #eaeaea', color: '#555', fontSize: '16px', textAlign: 'center' }}>
               {tip}
-            </div>
+            </li>
           ))}
-        </div>
-      </section>
+        </ul>
 
-      {/* 6. FAQs */}
-      <section style={{ marginBottom: '40px' }}>
-        <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '15px' }}>{t.faqHead}</h2>
-        <details style={{ padding: '15px', backgroundColor: '#f9fafb', marginBottom: '10px', borderRadius: '8px', border: '1px solid #ddd' }}>
-          <summary style={{ fontWeight: 'bold', cursor: 'pointer' }}>{t.faq1Q}</summary>
-          <p style={{ marginTop: '10px', color: '#555' }}>{t.faq1A}</p>
+        {/* FAQ section */}
+        <h2 style={{ fontFamily: 'Georgia, serif', fontSize: '28px', letterSpacing: '1px', marginBottom: '30px', textAlign: 'center' }}>{t.faqHead}</h2>
+        <details style={{ padding: '20px 0', borderBottom: '1px solid #eaeaea' }}>
+          <summary style={{ fontFamily: 'Georgia, serif', fontSize: '18px', cursor: 'pointer', outline: 'none' }}>{t.faq1Q}</summary>
+          <p style={{ marginTop: '15px', color: '#555', lineHeight: '1.6' }}>{t.faq1A}</p>
         </details>
-        <details style={{ padding: '15px', backgroundColor: '#f9fafb', marginBottom: '10px', borderRadius: '8px', border: '1px solid #ddd' }}>
-          <summary style={{ fontWeight: 'bold', cursor: 'pointer' }}>{t.faq2Q}</summary>
-          <p style={{ marginTop: '10px', color: '#555' }}>{t.faq2A}</p>
+        <details style={{ padding: '20px 0', borderBottom: '1px solid #eaeaea' }}>
+          <summary style={{ fontFamily: 'Georgia, serif', fontSize: '18px', cursor: 'pointer', outline: 'none' }}>{t.faq2Q}</summary>
+          <p style={{ marginTop: '15px', color: '#555', lineHeight: '1.6' }}>{t.faq2A}</p>
         </details>
       </section>
 
-      {/* 7. Footer & Social Links */}
-      <footer style={{ borderTop: '1px solid #ccc', paddingTop: '20px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px', paddingBottom: '40px' }}>
-        <a 
-          href="https://wa.me/201020001914" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          style={{ display: 'inline-block', padding: '10px 20px', backgroundColor: '#25D366', color: 'white', borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold' }}
-        >
-          {t.waBtn}
-        </a>
-        <div style={{ display: 'flex', gap: '20px', marginTop: '10px' }}>
-          <a href="https://www.instagram.com/dr.ahmad.azzam.orthopro.clinic/" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'none', fontWeight: 'bold' }}>{t.igBtn}</a>
-          <a href="https://www.google.com/search?q=%D8%AF%D9%83%D8%AA%D9%88%D8%B1+%D8%A3%D8%AD%D9%85%D8%AF+%D8%AD%D9%85%D8%AF%D9%89+%D8%B9%D8%B2%D8%A7%D9%85+Dr+Ahmad+Hamdi+Azzam-OrthoPro+Clinic&oq=%D8%AF%D9%83&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyBggCEEUYOzIGCAMQRRg5MgYIBBBFGD0yBggFEEUYPTIGCAYQRRg90gEIMTk4M2owajSoAgCwAgE&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'none', fontWeight: 'bold' }}>{t.googleBtn}</a>
+      {/* FOOTER */}
+      <footer style={{ backgroundColor: '#111827', color: '#fff', padding: '60px 20px', textAlign: 'center' }}>
+        <h2 style={{ fontFamily: 'Georgia, serif', fontSize: '24px', letterSpacing: '1px', marginBottom: '20px' }}>{t.contactHead}</h2>
+        <p style={{ fontSize: '14px', letterSpacing: '1px', marginBottom: '30px', color: '#aaa' }}>{t.address}</p>
+        
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px' }}>
+          <a 
+            href="https://wa.me/201020001914" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ padding: '12px 24px', backgroundColor: '#fff', color: '#111', textDecoration: 'none', fontSize: '12px', letterSpacing: '1px', fontWeight: 'bold' }}
+          >
+            {t.waBtn}
+          </a>
+          
+          <div style={{ display: 'flex', gap: '30px', marginTop: '20px' }}>
+            <a href="https://www.instagram.com/dr.ahmad.azzam.orthopro.clinic/" target="_blank" rel="noopener noreferrer" style={{ color: '#d4af37', textDecoration: 'none', fontSize: '12px', letterSpacing: '1px' }}>{t.igBtn}</a>
+            <a href="https://www.google.com/search?q=%D8%AF%D9%83%D8%AA%D9%88%D8%B1+%D8%A3%D8%AD%D9%85%D8%AF+%D8%AD%D9%85%D8%AF%D9%89+%D8%B9%D8%B2%D8%A7%D9%85+Dr+Ahmad+Hamdi+Azzam-OrthoPro+Clinic&oq=%D8%AF%D9%83&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyBggCEEUYOzIGCAMQRRg5MgYIBBBFGD0yBggFEEUYPTIGCAYQRRg90gEIMTk4M2owajSoAgCwAgE&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer" style={{ color: '#d4af37', textDecoration: 'none', fontSize: '12px', letterSpacing: '1px' }}>{t.googleBtn}</a>
+          </div>
         </div>
       </footer>
     </main>

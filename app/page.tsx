@@ -188,7 +188,7 @@ export default function Home() {
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '30px', marginTop: '30px' }}>
             
             {/* Facebook */}
-            <a href="https://facebook.com/YOUR_PAGE" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#d4af37', textDecoration: 'none', fontSize: '12px', letterSpacing: '1px' }}>
+            <a href="https://www.facebook.com/dr.ahmad.azzam.orthopro.clinic" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#d4af37', textDecoration: 'none', fontSize: '12px', letterSpacing: '1px' }}>
               <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
               </svg>
@@ -196,7 +196,7 @@ export default function Home() {
             </a>
 
             {/* TikTok */}
-            <a href="https://tiktok.com/@YOUR_HANDLE" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#d4af37', textDecoration: 'none', fontSize: '12px', letterSpacing: '1px' }}>
+            <a href="https://www.tiktok.com/@dr.ahmad.azzam.orthopro" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#d4af37', textDecoration: 'none', fontSize: '12px', letterSpacing: '1px' }}>
               <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 2.22-1.15 4.39-2.97 5.74-1.8 1.33-4.14 1.83-6.32 1.34-2.09-.48-3.92-1.89-4.88-3.79-.96-1.89-1.07-4.14-.28-6.07.78-1.92 2.37-3.48 4.36-4.17 2.03-.7 4.31-.7 6.28.1v4.25c-1.02-.32-2.14-.38-3.17-.07-1.1.33-2.05 1.1-2.58 2.08-.53.98-.6 2.16-.16 3.19.43 1.02 1.25 1.84 2.29 2.2.98.34 2.1.32 3.06-.08.97-.4 1.77-1.16 2.21-2.1.35-.74.45-1.58.42-2.4V.02z"/>
               </svg>

@@ -9,59 +9,69 @@ export default function Home() {
       <section style={{ textAlign: 'center', marginBottom: '40px' }}>
         <h1 style={{ fontSize: '32px', fontWeight: 'bold' }}>Dr. Ahmad Hamdi Azzam</h1>
         <p style={{ color: '#2563eb', fontSize: '18px' }}>Consultant of Orthopedic Surgery</p>
-        <div style={{ marginTop: '20px' }}>
-          <Image src="/profile.webp" alt="Dr. Ahmad Hamdi Azzam" width={200} height={200} sizes="200px" priority style={{ borderRadius: '50%', margin: '0 auto' }} />
+        <div style={{ marginTop: '20px', marginBottom: '30px' }}>
+          <Image 
+            src="/profile.webp" 
+            alt="Dr. Ahmad Hamdi Azzam" 
+            width={200} 
+            height={200} 
+            sizes="200px" 
+            priority
+            style={{ borderRadius: '50%', margin: '0 auto', objectFit: 'cover' }} 
+          />
         </div>
       </section>
 
-      {/* 2. Address & Book Now */}
+      {/* 2. Book Now Button */}
       <section style={{ marginBottom: '40px', textAlign: 'center' }}>
-        <p>40 Mosaddak St., Dokki, Giza | +20 1020001914</p>
-        <br />
-        https://calendly.com/azzam-ortho-pro
+        <a 
+          href="https://calendly.com/azzam-ortho-pro" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{ 
+            padding: '12px 24px', 
+            backgroundColor: '#2563eb', 
+            color: 'white', 
+            borderRadius: '8px', 
+            textDecoration: 'none',
+            fontWeight: 'bold',
+            display: 'inline-block',
+            boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+          }}
+        >
+          Book Now
+        </a>
       </section>
 
-      {/* 3. Horizontal Services Slider */}
+      {/* 3. Address */}
+      <section style={{ marginBottom: '40px', textAlign: 'center' }}>
+        <p style={{ fontSize: '16px', color: '#333' }}>
+          40 Mosaddak St., Dokki, Giza | +20 1020001914
+        </p>
+      </section>
+
+      {/* 4. Services */}
       <section style={{ marginBottom: '40px' }}>
-        <h2>Our Services</h2>
+        <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '15px' }}>Our Services</h2>
         <div style={{ display: 'flex', gap: '15px', overflowX: 'scroll', paddingBottom: '10px' }}>
           {['Joint Replacement', 'Sports Injuries', 'Trauma Management'].map((service, i) => (
-            <div key={i} style={{ minWidth: '200px', padding: '20px', backgroundColor: '#1e3a8a', color: 'white', borderRadius: '10px' }}>
+            <div key={i} style={{ minWidth: '200px', padding: '20px', backgroundColor: '#1e3a8a', color: 'white', borderRadius: '10px', textAlign: 'center', fontWeight: 'bold' }}>
               {service}
             </div>
           ))}
         </div>
       </section>
 
-      {/* 4. Horizontal Advice Slider */}
-      <section style={{ marginBottom: '40px' }}>
-        <h2>General Advice</h2>
-        <div style={{ display: 'flex', gap: '15px', overflowX: 'scroll', paddingBottom: '10px' }}>
-          {['Stay hydrated.', 'Maintain posture.', 'Warm up joints.'].map((tip, i) => (
-            <div key={i} style={{ minWidth: '200px', padding: '20px', backgroundColor: '#f3f4f6', borderRadius: '10px', border: '1px solid #ddd' }}>
-              {tip}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 5. FAQs */}
-      <section style={{ marginBottom: '40px' }}>
-        <h2>FAQs</h2>
-        <details style={{ padding: '10px', backgroundColor: '#f9fafb', marginBottom: '10px' }}>
-          <summary style={{ fontWeight: 'bold' }}>Do you accept insurance?</summary>
-          <p>Please contact our office to confirm your provider.</p>
-        </details>
-      </section>
-
-      {/* 6. Contact & Footer */}
+      {/* 5. Footer */}
       <footer style={{ borderTop: '1px solid #ccc', paddingTop: '20px', textAlign: 'center' }}>
-        <a href="https://wa.me/201020001914" style={{ display: 'block', marginBottom: '20px', color: 'green', fontWeight: 'bold' }}>Chat on WhatsApp</a>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '15px' }}>
-          <a href="https://www.google.com/search?q=%D8%AF%D9%83%D8%AA%D9%88%D8%B1+%D8%A3%D8%AD%D9%85%D8%AF+%D8%AD%D9%85%D8%AF%D9%89+%D8%B9%D8%B2%D8%A7%D9%85+Dr+Ahmad+Hamdi+Azzam-OrthoPro+Clinic&oq=%D8%AF%D9%83%D8%AA&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyBggCEEUYOzIGCAMQRRg5MgYIBBBFGD0yBggFEEUYPTIGCAYQRRg90gEIMjYwOGowajSoAgCwAgE&sourceid=chrome&ie=UTF-8">Google Business</a>
-          <a href="https://www.instagram.com/dr.ahmad.azzam.orthopro.clinic?igsh=MWx2ZmFhbGEwOGUwcA==">Instagram</a>
-          <a href="#">LinkedIn</a>
-        </div>
+        <a 
+          href="https://wa.me/201020001914" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{ display: 'inline-block', padding: '10px 20px', backgroundColor: '#25D366', color: 'white', borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold' }}
+        >
+          Chat on WhatsApp
+        </a>
       </footer>
     </main>
   );

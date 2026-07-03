@@ -91,7 +91,16 @@ export default function Home() {
           {t.toggleBtn}
         </button>
       </header>
-
+{menuOpen && (
+        <div style={{ position: 'absolute', top: '80px', left: lang === 'en' ? '40px' : 'auto', right: lang === 'ar' ? '40px' : 'auto', width: '250px', backgroundColor: '#fff', boxShadow: '0 5px 15px rgba(0,0,0,0.1)', zIndex: 1000, padding: '20px', border: '1px solid #eaeaea' }}>
+          <nav style={{ display: 'flex', flexDirection: 'column', gap: '15px', fontFamily: 'Georgia, serif' }}>
+            <a href="#about" onClick={() => setMenuOpen(false)} style={{ color: '#111', textDecoration: 'none', fontSize: '16px' }}>{t.aboutTitle}</a>
+            <a href="#services" onClick={() => setMenuOpen(false)} style={{ color: '#111', textDecoration: 'none', fontSize: '16px' }}>{t.servicesHead}</a>
+            <hr style={{ width: '100%', border: '0', borderTop: '1px solid #eee' }} />
+            <a href="https://wa.me/201020001914" style={{ color: '#25D366', textDecoration: 'none', fontSize: '16px', fontWeight: 'bold' }}>{t.waBtn}</a>
+          </nav>
+        </div>
+      )}
       {/* HERO SECTION */}
       <section style={{ backgroundColor: '#111827', color: '#fff', padding: '100px 20px', textAlign: 'center' }}>
         <h1 style={{ fontFamily: 'Georgia, serif', fontSize: '42px', fontWeight: 'normal', letterSpacing: '2px', marginBottom: '10px' }}>
